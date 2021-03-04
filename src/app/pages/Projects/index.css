@@ -1,0 +1,83 @@
+.project-form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.project-form {
+    /* position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 150px); */
+    height: 80px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* z-index: 9000; */
+}
+.project-form input {
+    height: 35px;
+    padding: 10px;
+    border: 2px solid #222;
+    margin: 10px 0;
+    width: 100%;
+    outline: none;
+}
+.project-form label {
+    width: 60%;
+    font-weight: bold;
+    font-size: 20px;
+    color: #222;
+}
+.project-form button {
+    height: 35px;
+    padding: 10px;
+    border: 0px;
+    border-radius: 0;
+    background-color: #222;
+    color: antiquewhite;
+    width: 30%;
+    cursor: pointer;
+}
+.create-project-button {
+    font-weight: bold;
+    font-size: 20px;
+    color: #222;
+    cursor: pointer;
+    width: 200px;
+    margin-bottom: 50px;
+}
+.error {
+    height: 20px;
+    color: rgb(170, 22, 22);
+    font-size: 15px;
+    text-align: center;
+}
+.create-project-button:hover {
+    color: #666;
+}
+.projects-box {
+    padding: 50px;
+}
+.projects-list li {
+    margin: 20px 20px 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+}
+.projects-list:hover {
+    color: #666;
+}
+.project-form-box {
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 150px);
+    z-index: 9000;
+}

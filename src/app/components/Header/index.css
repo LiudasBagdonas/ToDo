@@ -1,0 +1,24 @@
+header {
+    width: 100%;
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+nav {
+    display: flex;
+    padding: 0;
+}
+nav a {
+    text-decoration: none;
+    margin: 15px 30px;
+    color: antiquewhite;
+}
+nav a:hover {
+    color: rgb(240, 202, 34);
+}
+nav a:focus {
+    color: rgb(240, 202, 34);
+}
+
