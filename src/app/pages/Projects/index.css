@@ -19,6 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
     /* z-index: 9000; */
 }
 .project-form input {
@@ -69,9 +70,11 @@
     margin: 20px 20px 0;
     font-weight: bold;
     font-size: 16px;
-    color: #666;
+    color: #333;
     cursor: pointer;
+    /* text-transform: capitalize; */
 }
+
 .projects-list:hover {
     color: #666;
 }

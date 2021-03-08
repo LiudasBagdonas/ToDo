@@ -13,11 +13,11 @@ function Projects() {
         e.preventDefault();
 
         const newProject = document.getElementById('project-form-input').value
-        console.log(projects.includes(newProject))
+
         if (newProject !== '' && !projects.includes(newProject)) {
-            setProjects([...projects, newProject])
+            setProjects([...projects, newProject.toLowerCase()])
+
             setModalVisibility(false)
-            console.log(projects)
             setError('')
         } else if (newProject === '') {
             setError('Input can not be empty.')
@@ -26,13 +26,19 @@ function Projects() {
         }
     }
 
+    useEffect(() => {
+        if(projects.length > 0) {
+            localStorage.setItem('projects', JSON.stringify(projects) || null)
+        }
+    }, [projects])
+
     const removeModal = () => {
         setModalVisibility(false)
         setError('')
     }
 
     return (
-        <main className="">
+        <main>
             {/* Create Project modal shows up when button clicked */}
             {modalVisibility &&
                 <>
@@ -51,10 +57,11 @@ function Projects() {
                 </>
             }
             <div className="projects-box">
-                <p className="create-project-button" onClick={() => setModalVisibility(true)}>Create New Project</p>
+                <p className="create-project-button" onClick={() => setModalVisibility(true)}>+ Project</p>
+                <hr></hr>
                 <ul className="projects-list">
                     {projects.map((project, index) =>
-                        <li key={index}>{project}</li>
+                        <li key={index}>{project.charAt(0).toUpperCase() + project.slice(1)}</li>
                     )}
                 </ul>
             </div>
